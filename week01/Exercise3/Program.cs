@@ -16,5 +16,9 @@ class Program
         {
             Console.WriteLine("Lower");
         }
+        else
+        {
+            Console.WriteLine("You guessed it!");
+        }
     }
 }
