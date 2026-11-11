@@ -6,6 +6,9 @@ public class Entry
     private readonly string _promptText;
     private readonly string _entryText;
 
+    public string Date => _date;
+    public string PromptText => _promptText;
+    public string EntryText => _entryText;
     public Entry(string date, string promptText, string entryText)
     {
         _date = date;
