@@ -21,7 +21,7 @@ class Program
             Console.WriteLine("5. Quit");
             Console.Write("Choose an option: ");
 
-            choice = Console.ReadLine() ?? "5";
+            choice = Console.ReadLine()?.Trim() ?? "5";
 
             switch (choice)
             {
@@ -44,8 +44,15 @@ class Program
                 case "3":
                     Console.Write("Enter the filename to load: ");
                     string loadFile = Console.ReadLine() ?? "";
-                    journal.LoadFromFile(loadFile);
-                    Console.WriteLine("Journal loaded.");
+                    try
+                    {
+                        journal.LoadFromFile(loadFile);
+                        Console.WriteLine("Journal loaded.");
+                    }
+                    catch (System.IO.FileNotFoundException)
+                    {
+                        Console.WriteLine($"File '{loadFile}' was not found. Check the filename and try again.");
+                    }
                     break;
 
                 case "4":
