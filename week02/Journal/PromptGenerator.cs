@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public class PromptGenerator
@@ -13,6 +14,7 @@ public class PromptGenerator
 
     public string GetRandomPrompt()
     {
-        return "";
+        int randomIndex = Random.Shared.Next(_prompts.Count);
+        return _prompts[randomIndex];
     }
 }
