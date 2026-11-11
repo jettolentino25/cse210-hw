@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Creativity: The journal saves and loads JSON, which preserves
+        // punctuation such as commas and quotation marks in entries.
         Journal journal = new Journal();
         PromptGenerator promptGenerator = new PromptGenerator();
 
@@ -14,9 +16,9 @@ class Program
             Console.WriteLine();
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
-
-
             Console.Write("Choose an option: ");
 
             choice = Console.ReadLine() ?? "5";
