@@ -11,5 +11,12 @@ class Program
         job1._endYear = 2022;
 
         Console.WriteLine(job1._company);
+        Job job2 = new Job();
+        job2._jobTitle = "Manager";
+        job2._company = "Apple";
+        job2._startYear = 2022;
+        job2._endYear = 2023;
+
+        Console.WriteLine(job2._company);
     }
 }
