@@ -15,6 +15,8 @@ class Program
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("5. Quit");
+
+
             Console.Write("Choose an option: ");
 
             choice = Console.ReadLine() ?? "5";
@@ -37,11 +39,25 @@ class Program
                     journal.DisplayAll();
                     break;
 
+                case "3":
+                    Console.Write("Enter the filename to load: ");
+                    string loadFile = Console.ReadLine() ?? "";
+                    journal.LoadFromFile(loadFile);
+                    Console.WriteLine("Journal loaded.");
+                    break;
+
+                case "4":
+                    Console.Write("Enter the filename to save: ");
+                    string saveFile = Console.ReadLine() ?? "";
+                    journal.SaveToFile(saveFile);
+                    Console.WriteLine("Journal saved.");
+                    break;
+
                 case "5":
                     break;
 
                 default:
-                    Console.WriteLine("Please choose 1, 2, or 5.");
+                    Console.WriteLine("Please choose an option from 1 to 5.");
                     break;
             }
         }
