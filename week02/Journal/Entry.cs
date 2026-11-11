@@ -1,8 +1,10 @@
+using System;
+
 public class Entry
 {
-    private string _date = "";
-    private string _promptText = "";
-    private string _entryText = "";
+    private readonly string _date;
+    private readonly string _promptText;
+    private readonly string _entryText;
 
     public Entry(string date, string promptText, string entryText)
     {
@@ -13,7 +15,7 @@ public class Entry
 
     public void Display()
     {
-        System.Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
-        System.Console.WriteLine(_entryText);
+        Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
+        Console.WriteLine(_entryText);
     }
 }
