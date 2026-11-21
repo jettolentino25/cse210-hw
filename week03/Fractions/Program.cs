@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Fractions Project.");
+        Fraction first = new Fraction();
+        Fraction second = new Fraction(6);
+        Fraction third = new Fraction(6, 7);
+
+        Console.WriteLine("Created three fractions.");
     }
 }
