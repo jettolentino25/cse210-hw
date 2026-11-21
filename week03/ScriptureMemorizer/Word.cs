@@ -11,10 +11,12 @@ public class Word
 
     public void Hide()
     {
+        _isHidden = true;
     }
 
     public void Show()
     {
+        _isHidden = false;
     }
 
     public bool IsHidden()
@@ -24,6 +26,21 @@ public class Word
 
     public string GetDisplayText()
     {
-        return _text;
+        if (!_isHidden)
+        {
+            return _text;
+        }
+
+        char[] displayCharacters = _text.ToCharArray();
+
+        for (int i = 0; i < displayCharacters.Length; i++)
+        {
+            if (char.IsLetter(displayCharacters[i]))
+            {
+                displayCharacters[i] = '_';
+            }
+        }
+
+        return new string(displayCharacters);
     }
 }
