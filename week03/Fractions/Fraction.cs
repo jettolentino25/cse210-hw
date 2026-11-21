@@ -39,4 +39,13 @@ public class Fraction
     {
         _bottom = bottom;
     }
+        public string GetFractionString()
+    {
+        return $"{_top}/{_bottom}";
+    }
+
+    public double GetDecimalValue()
+    {
+        return (double)_top / _bottom;
+    }
 }
