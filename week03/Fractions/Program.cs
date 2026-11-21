@@ -8,6 +8,9 @@ class Program
         Fraction second = new Fraction(6);
         Fraction third = new Fraction(6, 7);
 
-        Console.WriteLine("Created three fractions.");
+        third.SetTop(3);
+        third.SetBottom(4);
+        Console.WriteLine(third.GetTop());
+        Console.WriteLine(third.GetBottom());
     }
 }
