@@ -12,5 +12,9 @@ class Program
 
         Console.WriteLine(video1.GetTitle());
         Console.WriteLine($"Comments: {video1.GetCommentCount()}");
+        foreach (Comment comment in video1.GetComments())
+        {
+            Console.WriteLine($"- {comment.GetPersonName()}: {comment.GetComment()}");
+        }
     }
 }
