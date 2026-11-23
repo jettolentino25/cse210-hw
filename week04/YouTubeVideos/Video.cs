@@ -13,4 +13,16 @@ public class Video
         _author = author;
         _lengthInSeconds = lengthInSeconds;
     }
+    public void AddComment(Comment comment)
+    {
+        _comments.Add(comment);
+    }
+    public int GetCommentCount()
+    {
+        return _comments.Count;
+    }
+    public IReadOnlyList<Comment> GetComments()
+    {
+        return _comments.AsReadOnly();
+    }
 }
