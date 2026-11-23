@@ -25,4 +25,18 @@ public class Video
     {
         return _comments.AsReadOnly();
     }
+    public string GetTitle()
+    {
+        return _title;
+    }
+
+    public string GetAuthor()
+    {
+        return _author;
+    }
+
+    public int GetLengthInSeconds()
+    {
+        return _lengthInSeconds;
+    }
 }
