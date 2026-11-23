@@ -10,7 +10,9 @@ class Program
         video1.AddComment(new Comment("Sam", "The cable setup looks clean."));
         video1.AddComment(new Comment("Jordan", "What keyboard are you using?"));
 
-        Console.WriteLine(video1.GetTitle());
+        Console.WriteLine($"Title: {video1.GetTitle()}");
+        Console.WriteLine($"Author: {video1.GetAuthor()}");
+        Console.WriteLine($"Length: {video1.GetLengthInSeconds()} seconds");
         Console.WriteLine($"Comments: {video1.GetCommentCount()}");
         foreach (Comment comment in video1.GetComments())
         {
