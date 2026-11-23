@@ -18,7 +18,7 @@ class Program
         Video video3 = new Video("Making Coffee at Home", "Morgan", 210);
         video3.AddComment(new Comment("Avery", "The scale looks easy to read."));
         video3.AddComment(new Comment("Drew", "What grinder are you using?"));
-        video3.AddComment(new Comment("Quinn", "I tried this recipe and liked it."));
+        video3.AddComment(new Comment("Quinn", "I tried this recipe and liked it too."));
 
         List<Video> videos = new List<Video> { video1, video2, video3 };
 
