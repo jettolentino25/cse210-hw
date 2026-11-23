@@ -14,6 +14,11 @@ class Program
         video2.AddComment(new Comment("Casey", "The packing cubes look handy."));
         video2.AddComment(new Comment("Riley", "How much does the bag weigh?"));
         video2.AddComment(new Comment("Jamie", "I like the separate shoe pocket."));
+        Video video3 = new Video("Making Coffee at Home", "Morgan", 210);
+
+        video3.AddComment(new Comment("Avery", "The scale looks easy to read."));
+        video3.AddComment(new Comment("Drew", "What grinder are you using?"));
+        video3.AddComment(new Comment("Quinn", "I tried this recipe and liked it."));
 
         Console.WriteLine($"Title: {video1.GetTitle()}");
         Console.WriteLine($"Author: {video1.GetAuthor()}");
