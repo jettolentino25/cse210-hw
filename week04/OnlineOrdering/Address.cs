@@ -17,4 +17,8 @@ class Address
     {
         return _country == "USA";
     }
+    public string GetFormattedAddress()
+{
+    return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{_country}";
+}
 }
