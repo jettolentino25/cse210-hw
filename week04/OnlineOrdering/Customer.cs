@@ -4,15 +4,15 @@ class Customer
     private Address _address;
     public Customer(string name, Address address)
     {
-    _name = name;
-    _address = address;
+        _name = name;
+        _address = address;
     }
     public bool LivesInUsa()
     {
-    return _address.IsInUsa();
+        return _address.IsInUsa();
     }
     public string GetShippingLabel()
     {
-    return $"{_name}\n{_address.GetFormattedAddress()}";
+        return $"{_name}\n{_address.GetFormattedAddress()}";
     }
 }
