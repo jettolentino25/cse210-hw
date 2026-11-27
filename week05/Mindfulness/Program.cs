@@ -1,10 +1,12 @@
 using System;
+// Creativity: The Reflecting Activity picks questions in random order.
+// It uses every question once before starting a new round.
 
 class Program
 {
     static void Main(string[] args)
     {
-                while (true)
+        while (true)
         {
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflecting Activity");
